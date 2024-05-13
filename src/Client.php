@@ -15,6 +15,10 @@ class Client
 
     private string $url = 'http://127.0.0.1:14579/';
 
+    /**
+     * @param string $url Default URL: http://127.0.0.1:14579/
+     * @return void
+     */
     public function setUrl(string $url): void
     {
         $this->url = $url;
