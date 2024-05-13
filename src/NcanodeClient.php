@@ -9,6 +9,7 @@ use Oibay\Ncanode\Client\Exceptions\HttpException;
 use Oibay\Ncanode\Domains\PkcsInfo;
 use Oibay\Ncanode\Domains\Verify;
 use Oibay\Ncanode\Domains\X509Info;
+use Oibay\Ncanode\Domains\XMLSign;
 
 class NcanodeClient
 {
@@ -37,6 +38,20 @@ class NcanodeClient
     public function pkcsInfo(string $key, string $password, string $alies = null): mixed
     {
         return $this->execute(new PkcsInfo($key, $password, $alies));
+    }
+
+    /**
+     * @throws HttpException
+     */
+    public function xmlSign(
+        string $xml,
+        string $key,
+        string $password,
+        ?string $keyAlias = null,
+        bool $clearSignatures = false,
+        bool $trimXml = false
+    ): mixed {
+        return $this->execute(new XMLSign($xml, $key, $password, $keyAlias, $clearSignatures, $trimXml));
     }
 
 

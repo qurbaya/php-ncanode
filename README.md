@@ -14,7 +14,7 @@ composer require oibay/ncanode_client
 
 ### Пример
 
-``` 
+``` php
 <?php
 
 use Oibay\Ncanode\NcanodeClient;
@@ -23,9 +23,11 @@ $client = new NcanodeClient();
 
 $client->setUrl(); //По умолчанию http://localhost:14579/
 
-$client->x509Info(base64_encode('<root></root>'));
+$client->x509Info(base64_encode('key'));
 
-$client->pkcsInfo(base64_encode('<root></root>'),'123');
+$client->pkcsInfo(base64_encode('key'),'123');
 
-$client->verifyXML('<root></root>');
+$client->verifyXML('xml');
+
+$client->xmlSign('<root></root>',base64_encode('123'),'123')
 ```
