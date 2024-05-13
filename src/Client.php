@@ -13,6 +13,12 @@ use Oibay\Ncanode\Domains\X509Info;
 class Client
 {
 
+    private string $url = 'http://127.0.0.1:14579/';
+
+    public function setUrl(string $url): void
+    {
+        $this->url = $url;
+    }
     /**
      * @throws HttpException
      */
@@ -43,7 +49,7 @@ class Client
      */
     private function execute(object $data): mixed
     {
-        return (new HttpClient())->execute(
+        return (new HttpClient($this->url))->execute(
                     $data->getAction(),
                     $data->toArray()
                 );

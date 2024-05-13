@@ -11,7 +11,7 @@ class Client implements ClientInterface
 {
     private string $url;
 
-    public function __construct(string $url = 'http://127.0.0.1:14579/')
+    public function __construct(string $url)
     {
         $this->url = $url;
     }
