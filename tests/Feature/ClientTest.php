@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 namespace Oibay\Ncanode\Tests\Feature;
 
-use Oibay\Ncanode\Client;
+use Oibay\Ncanode\NcanodeClient;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
@@ -18,7 +18,7 @@ class ClientTest extends TestCase
     {
         parent::setUp();
 
-        $this->client = $this->getMockBuilder(Client::class)->getMock();
+        $this->client = $this->getMockBuilder(NcanodeClient::class)->getMock();
     }
 
     public function testVerifyXml(): void

@@ -7,6 +7,7 @@ namespace Oibay\Ncanode\Domains;
 
 use Oibay\Ncanode\Domains\Constants\Action;
 use Oibay\Ncanode\Domains\Contracts\DomainInterface;
+use Webmozart\Assert\Assert;
 
 class PkcsInfo implements DomainInterface
 {
@@ -22,6 +23,8 @@ class PkcsInfo implements DomainInterface
      */
     public function __construct(string $key, string $password, ?string $alies)
     {
+        Assert::notEmpty($key);
+        Assert::notEmpty($password);
         $this->key = $key;
         $this->password = $password;
         $this->alies = $alies;

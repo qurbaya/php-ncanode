@@ -6,6 +6,7 @@ namespace Oibay\Ncanode\Domains;
 
 use Oibay\Ncanode\Domains\Constants\Action;
 use Oibay\Ncanode\Domains\Contracts\DomainInterface;
+use Webmozart\Assert\Assert;
 
 class X509Info implements DomainInterface
 {
@@ -16,6 +17,7 @@ class X509Info implements DomainInterface
      */
     public function __construct(string $certs)
     {
+        Assert::notEmpty($certs);
         $this->certs = $certs;
     }
 

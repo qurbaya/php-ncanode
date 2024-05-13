@@ -10,7 +10,7 @@ use Oibay\Ncanode\Domains\PkcsInfo;
 use Oibay\Ncanode\Domains\Verify;
 use Oibay\Ncanode\Domains\X509Info;
 
-class Client
+class NcanodeClient
 {
 
     private string $url = 'http://127.0.0.1:14579/';

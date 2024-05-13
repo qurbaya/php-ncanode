@@ -6,6 +6,7 @@ namespace Oibay\Ncanode\Domains;
 
 use Oibay\Ncanode\Domains\Constants\Action;
 use Oibay\Ncanode\Domains\Contracts\DomainInterface;
+use Webmozart\Assert\Assert;
 
 class Verify implements DomainInterface
 {
@@ -13,6 +14,7 @@ class Verify implements DomainInterface
 
     public function __construct(string $xml)
     {
+        Assert::notEmpty($xml);
         $this->xml = $xml;
     }
 

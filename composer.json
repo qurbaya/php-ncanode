@@ -11,7 +11,8 @@
   ],
   "require": {
     "php": "^8.0",
-    "ext-curl": "*"
+    "ext-curl": "*",
+    "webmozart/assert": "^1.11"
   },
   "autoload": {
     "psr-4": {
