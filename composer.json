@@ -1,6 +1,6 @@
 {
-  "name": "ncanode_client/ncanode_client",
-  "description": "description",
+  "name": "oibay/ncanode_client",
+  "description": "NCANODEV3 php client",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
