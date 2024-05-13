@@ -17,9 +17,11 @@ composer require oibay/ncanode_client
 ``` 
 <?php
 
-use Oibay\Ncanode\Client;
+use Oibay\Ncanode\NcanodeClient;
 
-$client = new Client();
+$client = new NcanodeClient();
+
+$client->setUrl(); //По умолчанию http://localhost:14579/
 
 $client->x509Info(base64_encode('<root></root>'));
 
