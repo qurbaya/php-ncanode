@@ -1,0 +1,21 @@
+{
+  "name": "ncanode_client/ncanode_client",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "alisherro",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Oibay\\Ncanode\\": "src/"
+    }
+  }
+}
