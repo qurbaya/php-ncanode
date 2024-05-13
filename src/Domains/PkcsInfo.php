@@ -1,5 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
+
 namespace Oibay\Ncanode\Domains;
 
 use Oibay\Ncanode\Domains\Constants\Action;

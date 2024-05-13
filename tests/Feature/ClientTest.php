@@ -1,5 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
+
 namespace Oibay\Ncanode\Tests\Feature;
 
 use Oibay\Ncanode\Client;

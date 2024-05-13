@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Oibay\Ncanode\Client;
 
 use Oibay\Ncanode\Client\Contracts\ClientInterface;

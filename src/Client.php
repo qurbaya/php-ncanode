@@ -1,6 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Oibay\Ncanode;
+
 use Oibay\Ncanode\Client\Client as HttpClient;
 use Oibay\Ncanode\Client\Exceptions\HttpException;
 use Oibay\Ncanode\Domains\PkcsInfo;
