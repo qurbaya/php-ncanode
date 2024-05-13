@@ -13,7 +13,7 @@ class PkcsInfo implements DomainInterface
     private ?string $alies = null;
 
     /**
-     * @param string $key
+     * @param string $key The key in Base64 format.
      * @param string $password
      * @param string|null $alies
      */
