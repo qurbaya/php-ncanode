@@ -3,7 +3,7 @@
 namespace Oibay\Ncanode;
 use Oibay\Ncanode\Client\Client as HttpClient;
 use Oibay\Ncanode\Client\Exceptions\HttpException;
-use Oibay\Ncanode\Domains\Info;
+use Oibay\Ncanode\Domains\PkcsInfo;
 use Oibay\Ncanode\Domains\Verify;
 
 class Client
@@ -20,9 +20,9 @@ class Client
     /**
      * @throws HttpException
      */
-    public function info(string $key, string $password, string $alies = null): mixed
+    public function pkcsInfo(string $key, string $password, string $alies = null): mixed
     {
-        return $this->execute(new Info($key, $password, $alies));
+        return $this->execute(new PkcsInfo($key, $password, $alies));
     }
 
     /**

@@ -5,7 +5,7 @@ namespace Oibay\Ncanode\Domains;
 use Oibay\Ncanode\Domains\Constants\Action;
 use Oibay\Ncanode\Domains\Contracts\DomainInterface;
 
-class Info implements Contracts\DomainInterface
+class PkcsInfo implements DomainInterface
 {
 
     private string $key;
