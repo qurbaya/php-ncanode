@@ -14,9 +14,9 @@ class PkcsInfo implements DomainInterface
 
     private string $key;
     private string $password;
-    private ?string $alies = null;
+    private ?string $alies;
 
-    public function __construct(string $key, string $password, ?string $alies)
+    public function __construct(string $key, string $password, ?string $alies = null)
     {
         Assert::notEmpty($key);
         Assert::notEmpty($password);
