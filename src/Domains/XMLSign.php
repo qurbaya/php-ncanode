@@ -11,15 +11,10 @@ class XMLSign implements DomainInterface
 {
 
     private string $xml;
-
     private string $key;
-
     private string $password;
-
     private ?string $keyAlias;
-
     private bool $clearSignatures;
-
     private bool $trimXml;
 
 

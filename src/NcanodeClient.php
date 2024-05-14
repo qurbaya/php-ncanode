@@ -8,6 +8,7 @@ use Oibay\Ncanode\Client\Client as HttpClient;
 use Oibay\Ncanode\Client\Exceptions\HttpException;
 use Oibay\Ncanode\Domains\PkcsInfo;
 use Oibay\Ncanode\Domains\Verify;
+use Oibay\Ncanode\Domains\WsseSign;
 use Oibay\Ncanode\Domains\X509Info;
 use Oibay\Ncanode\Domains\XMLSign;
 
@@ -27,7 +28,7 @@ class NcanodeClient
     /**
      * @throws HttpException
      */
-    public function verifyXML(string $xml): mixed
+    public function verifyXML(string $xml): array
     {
         return $this->execute(new Verify($xml));
     }
@@ -35,7 +36,7 @@ class NcanodeClient
     /**
      * @throws HttpException
      */
-    public function pkcsInfo(string $key, string $password, string $alies = null): mixed
+    public function pkcsInfo(string $key, string $password, string $alies = null): array
     {
         return $this->execute(new PkcsInfo($key, $password, $alies));
     }
@@ -50,15 +51,28 @@ class NcanodeClient
         ?string $keyAlias = null,
         bool $clearSignatures = false,
         bool $trimXml = false
-    ): mixed {
+    ): array {
         return $this->execute(new XMLSign($xml, $key, $password, $keyAlias, $clearSignatures, $trimXml));
+    }
+
+    /**
+     * @throws HttpException
+     */
+    public function wsseSign(
+        string $xml,
+        string $key,
+        string $password,
+        ?string $keyAlias = null,
+        bool $trimXml = false
+    ): array {
+        return $this->execute(new WsseSign($xml, $key, $password, $keyAlias, $trimXml));
     }
 
 
     /**
      * @throws HttpException
      */
-    public function x509Info(string $certs): mixed
+    public function x509Info(string $certs): array
     {
         return $this->execute(new X509Info($certs));
     }
@@ -66,7 +80,7 @@ class NcanodeClient
     /**
      * @throws HttpException
      */
-    private function execute(object $data): mixed
+    private function execute(object $data): array
     {
         return (new HttpClient($this->url))->execute(
                     $data->getAction(),

@@ -16,11 +16,6 @@ class PkcsInfo implements DomainInterface
     private string $password;
     private ?string $alies = null;
 
-    /**
-     * @param string $key The key in Base64 format.
-     * @param string $password
-     * @param string|null $alies
-     */
     public function __construct(string $key, string $password, ?string $alies)
     {
         Assert::notEmpty($key);

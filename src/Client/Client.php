@@ -15,7 +15,7 @@ class Client implements ClientInterface
     {
         $this->url = $url;
     }
-    public function execute(string $action, array $data): mixed
+    public function execute(string $action, array $data): array
     {
         $curl = curl_init();
 

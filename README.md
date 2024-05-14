@@ -12,7 +12,7 @@ composer require oibay/ncanode_client
 
 ### Подробно [ncanode.kz](https://ncanode.kz/).
 
-### Пример
+### Методы
 
 ``` php
 <?php
@@ -21,13 +21,15 @@ use Oibay\Ncanode\NcanodeClient;
 
 $client = new NcanodeClient();
 
-$client->setUrl(); //По умолчанию http://localhost:14579/
+$client->setUrl(); //По умолчанию http://localhost:14579/ 
 
-$client->x509Info(base64_encode('key'));
+$client->x509Info();
 
-$client->pkcsInfo(base64_encode('key'),'123');
+$client->pkcsInfo();
 
-$client->verifyXML('xml');
+$client->verifyXML();
 
-$client->xmlSign('<root></root>',base64_encode('123'),'123')
+$client->xmlSign();
+
+$client->wsseSign();
 ```

@@ -13,4 +13,6 @@ final class Action
     public const X509_INFO      = 'x509/info';
 
     public const XML_SIGN       = 'xml/sign';
+
+    public const WSSE_SIGN      = 'wsse/sign';
 }

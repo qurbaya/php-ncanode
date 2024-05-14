@@ -12,9 +12,6 @@ class X509Info implements DomainInterface
 {
     private string $certs;
 
-    /**
-     * @param string $certs The certs in Base64 format.
-     */
     public function __construct(string $certs)
     {
         Assert::notEmpty($certs);
