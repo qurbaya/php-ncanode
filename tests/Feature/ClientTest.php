@@ -17,7 +17,6 @@ class ClientTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
         $this->client = $this->getMockBuilder(NcanodeClient::class)->getMock();
     }
 
