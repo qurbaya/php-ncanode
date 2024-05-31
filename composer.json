@@ -26,5 +26,6 @@
     "psr-4": {
       "Oibay\\Ncanode\\Tests\\": "tests/"
     }
-  }
+  },
+  "version": "1.0.0"
 }
