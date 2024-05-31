@@ -1,8 +1,8 @@
 {
   "name": "oibay/ncanode_client",
   "description": "NCANODEV3 php client",
-  "minimum-stability": "stable",
-  "license": "proprietary",
+  "homepage": "https://github.com/qurbaya/php-ncanode",
+  "license": "MIT",
   "authors": [
     {
       "name": "oibay",
@@ -27,5 +27,6 @@
       "Oibay\\Ncanode\\Tests\\": "tests/"
     }
   },
-  "version": "1.1.0"
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
