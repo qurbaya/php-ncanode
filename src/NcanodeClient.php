@@ -97,7 +97,7 @@ class NcanodeClient
                 );
 
         if (!isset($response['signers'][0])) {
-            throw new \InvalidArgumentException('Signers Not found');
+            throw new \InvalidArgumentException('Signers Not found', 100);
         }
 
         $data = $response['signers'][0];
@@ -111,7 +111,7 @@ class NcanodeClient
     private function isValid(bool $value): void
     {
         if ($value === false) {
-            throw new DomainException('Certificate is not valid');
+            throw new DomainException('Certificate is not valid', 101);
         }
     }
 
@@ -122,7 +122,7 @@ class NcanodeClient
     {
         $now = new DateTime();
         if ($now < new DateTime($startAt) || $now > new DateTime($endAt)) {
-            throw new DomainException("Current date is outside the valid range.");
+            throw new DomainException("Current date is outside the valid range.", 102);
         }
     }
 }
