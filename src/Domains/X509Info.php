@@ -30,7 +30,9 @@ class X509Info implements DomainInterface
             'revocationCheck' => [
                 'OCSP'
             ],
-            'certs' => $this->certs
+            'certs' => [
+                $this->certs
+            ]
         ];
     }
 }

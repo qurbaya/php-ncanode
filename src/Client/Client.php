@@ -19,7 +19,7 @@ class Client implements ClientInterface
     {
         $curl = curl_init();
 
-        curl_setopt($curl, CURLOPT_URL, $this->url . $action);
+        curl_setopt($curl, CURLOPT_URL, $this->url.$action);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
