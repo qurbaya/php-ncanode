@@ -15,4 +15,7 @@ final class Action
     public const XML_SIGN       = 'xml/sign';
 
     public const WSSE_SIGN      = 'wsse/sign';
+
+    public const CMS_SIGN      = 'cms/sign';
+
 }

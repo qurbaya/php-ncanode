@@ -32,4 +32,5 @@ $client->verifyXML();
 $client->xmlSign();
 
 $client->wsseSign();
+$client->cmsSign();
 ```

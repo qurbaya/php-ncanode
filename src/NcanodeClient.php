@@ -9,6 +9,7 @@ use DomainException;
 use Exception;
 use Oibay\Ncanode\Client\Client as HttpClient;
 use Oibay\Ncanode\Client\Exceptions\HttpException;
+use Oibay\Ncanode\Domains\CmsSign;
 use Oibay\Ncanode\Domains\PkcsInfo;
 use Oibay\Ncanode\Domains\Verify;
 use Oibay\Ncanode\Domains\WsseSign;
@@ -83,6 +84,30 @@ class NcanodeClient
     public function x509Info(string $certs): array
     {
         return $this->execute(new X509Info($certs));
+    }
+
+    /**
+     * @throws HttpException
+     */
+    public function cmsSign(
+        string $data,
+        string $key,
+        string $password,
+        bool $withTsp = true,
+        string $tsaPolicy = 'TSA_GOST_POLICY',
+        bool $detached = false,
+        ?string $alies = null
+    ): array
+    {
+        return $this->execute(new CmsSign(
+            $data,
+            $key,
+            $password,
+            $withTsp,
+            $tsaPolicy,
+            $detached,
+            $alies
+        ));
     }
 
     /**
