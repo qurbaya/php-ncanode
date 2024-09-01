@@ -9,6 +9,10 @@ use Oibay\Ncanode\Client\Exceptions\HttpException;
 
 class Client implements ClientInterface
 {
+    /**
+     * @var string
+     * Тест
+     */
     private string $url;
 
     public function __construct(string $url)
